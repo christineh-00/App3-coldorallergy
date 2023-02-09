@@ -38,7 +38,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
         var allergy_count = 0;
         var cold_count = 0;
-
+	<var resultText = document.getElementById("results")>
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
@@ -49,6 +49,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coldAdd(){
             cold_count = cold_count + 1;
         }
+	
+	var total = allergy_count + cold_count;
+		alert ("Allergy Precentage:" + (allergy_count/total) * 100 + "Cold Percentage:" + (cold_count/total) * 100
 
   </script>
 
@@ -133,8 +136,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Are your symptoms seasonal or chronic?</p>
-			<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         		<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+			<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Seasonal</a>
+         		<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">Chronic</a>
 	</div>
 </div>	
 	
@@ -144,10 +147,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p></p>
 		<p id="results"></p>
-		var resultText = document.getElementById("results")
-		resultText.innerHTML = "Probability it is allergies =" + 100% allergyPercent + "<br> Probability it is a cold =" + 100% coldPercent
+		<resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent>
 	</div>
 	
 </div>	
