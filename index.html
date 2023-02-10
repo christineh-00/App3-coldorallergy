@@ -55,20 +55,21 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
 		alert(allergy_count);
 		<!--function to keep track of the cold answers on survey-->
+		<!--added in a second alert to show up on the survery-->
 
         }
 
 	
-	var total = allergy_count + cold_count;
-		alert ("Allergy Precentage:" + (allergy_count/total) * 100 + "Cold Percentage:" + (cold_count/total) * 100
-		<!--function to calculate the results of allergy vs cold count at the end of survery-->
+	function computeresults
+		var allergyPercent = (allergy_count/6)*100
+		<!--created a formula to calulate for the allergy precentage-->
+		var coldPercent = (cold_count/6)*100
+		<!--cretaed a formula to claculate for the cold precentage-->
+		var resultText = document.getElementById("last page");
+		<!--added in function to calculate and display results-->
+		<!--cretaed a function for the results to show on the last page-->
 
   </script>
-<!--added in alert to display allergy count and cold count-->
-<!--added in function to clalculate and display results-->
-<!--var total will add allergy count and cold count to get the total-->
-<!--added an alert for precentage display to results by dividing the allergy count by the total and then multiplied it by 100, then did the same for thr cold count so that both percentages are displayed-->
-<!--added in a second alert to show up on page using-->
 	
 	
 <style>	
@@ -117,7 +118,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <p>Are your eyes watery or itchy?</p>
 	<!--the two code below will  display two buttons on the survery that will show either a "yes" or "no" for the patient to choose from*/-->
 		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> No</a>
     	</div>
 </div>
 
@@ -132,7 +133,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			<!--the two code below will  display two buttons on the survery that will show either a "yes" or "no" for the patient to choose from-->
 			<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
 			<!--changed "#two" to "#three"-->
-         		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">No</a> 
+         		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> No</a> 
 			<!--changed "#two" to "#three"-->
 	</div>
 </div>	
@@ -151,7 +152,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			<!--the two code below will  display two buttons on the survery that will show either a "yes" or "no" for the patient to choose from-->
 			<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
 			<!--changed "#three" to "#four"-->
-         		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">No</a> 
+         		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> No</a> 
 			<!--changed "#three" to "#four"-->
 	</div>
 </div>	
@@ -168,9 +169,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		 <!--changed "Do you have a sore throat?" to "Are your symptoms seasonal or chronic?"-->
 		<p>Are your symptoms seasonal or chronic?</p>
 			<!--the two code below will  display two buttons on the survery that will show either a "seasonal" or "chronic" for the patient to choose from-->
-			<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> seasonal</a> 
+			<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Seasonal</a> 
 			<!--changed "#four" to "#five"-->
-         		<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">chronic</a> 
+         		<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black"> Chronic</a> 
 			<!--changed "#four" to "#five"-->
 	</div>
 </div>	
@@ -189,7 +190,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			<!--the two code below will  display two buttons on the survery that will show either a "yes" or "no" for the patient to choose from-->
 			<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> 
 			<!--changed "#five" to "#six"-->
-         		<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black">No</a> 
+         		<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black"> No</a> 
 			<!--changed "#five" to "#six"-->
 	</div>
 </div>	
@@ -206,30 +207,26 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		 <!--changed "Is your mucus thin and watery?" to "Is your mucus thick yellow or green?"-->
 		<p>Is your mucus thick yellow or green?</p>
 			<!--the two code below will  display two buttons on the survery that will show either a "yes" or "no" for the patient to choose from-->
-			<a href="#seven"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>  
+			<a href="#last page"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>  
 			<!--changed "#six" to "#seven"-->
-         		<a href="#seven"  onclick="coldAdd();" class="w3-btn w3-black">No</a> 
+         		<a href="#last page"  onclick="coldAdd();" class="w3-btn w3-black"> No</a> 
 			<!--changed "#six" to "#seven"-->
 	</div>
 </div>		
 	
-<!--copied contents from the last section to create a new page-->
+<!--copied contents from the last section to create a new page for the results to show-->
 	
-<div class="page" id="seven">
+<div class="page" id="last page">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1> 
 		<!--changed "Question 6" to "Results"-->
-
+		<a href="#last page"  onclick="last page;" class="w3-btn w3-black">results</a> 
+		<!--created a button to display the results-->
+		
 	</div>
-	
-	<div id="content" class="w3-container">
-		<!--the two code below should make the results appear on the survery/*-->
-		<p id="results"></p>
-		<resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent>
-	</div>
-	
 </div>	
 
+	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
