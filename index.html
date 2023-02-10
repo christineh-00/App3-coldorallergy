@@ -38,23 +38,39 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
         var allergy_count = 0;
         var cold_count = 0;
-	<var resultText = document.getElementById("results")>
+	
+<!--function to show the results on the results page at the end of the survery-->
+	
+	var resultText = document.getElementById("results")
 
+<!--function to keep track of the cold answers on survey-->
+	
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 		alert(allergy_count);
 
         }
 
+<!--function to keep track of the cold answers on survey-->
+	
         function coldAdd(){
             cold_count = cold_count + 1;
+		alert(allergy_count);
+
         }
+	
+<!--function to calculate the results of allergy vs cold count at the end of survery-->
 	
 	var total = allergy_count + cold_count;
 		alert ("Allergy Precentage:" + (allergy_count/total) * 100 + "Cold Percentage:" + (cold_count/total) * 100
 
   </script>
-
+<!--added in alert to display allergy count and cold count-->
+<!--added in function to clalculate and display results-->
+<!--var total will add allergy count and cold count to get the total-->
+<!--added an alert for precentage display to results by dividing the allergy count by the total and then multiplied it by 100, then did the same for thr cold count so that both percentages are displayed-->
+<!--added in a second alert to show up on page using-->
+	
 	
 <style>	
 .body {
@@ -98,10 +114,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are your eyes watery or itchy?</p>   
+	 // changed "Put Question 1 content here" to "Are your eyes watery or itchy?"
+        <p>Are your eyes watery or itchy?</p>
+		/* the two code below will  display two buttons on the survery that will show either a "yes" or "no" for the patient to choose from*/
 		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
-
     	</div>
 </div>
 
@@ -111,66 +128,82 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
+		 // changed "Content of page 2 goes here" to "Do you have a fever?"
 		<p>Do you have a fever?</p>
-			<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+			/* the two code below will  display two buttons on the survery that will show either a "yes" or "no" for the patient to choose from*/
+			<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> // changed "#two" to "#three"
+         		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">No</a> // changed "#two" to "#three"
 	</div>
 </div>	
-	
+
+//copied contents from the last section to create a new page
 <div class="page" id="three">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 3</h1>
+		<h1>Question 3</h1> // changed "Question 2" to "Question 3"
 	</div>
 	
 	<div id="content" class="w3-container">
+		 // changed "Do you have a fever?" to "Do you have a sore throat?"
 		<p>Do you have a sore throat?</p>
-			<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+			/* the two code below will  display two buttons on the survery that will show either a "yes" or "no" for the patient to choose from*/
+			<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> // changed "#three" to "#four"
+         		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">No</a> // changed "#three" to "#four"
 	</div>
 </div>	
 	
+//copied contents from the last section to create a new page	
 <div class="page" id="four">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 4</h1>
+		<h1>Question 4</h1> // changed "Question 3" to "Question 4"
 	</div>
 	
 	<div id="content" class="w3-container">
+		 // changed "Do you have a sore throat?" to "Are your symptoms seasonal or chronic?"
 		<p>Are your symptoms seasonal or chronic?</p>
-			<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Seasonal</a>
-         		<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">Chronic</a>
+			/* the two code below will  display two buttons on the survery that will show either a "seasonal" or "chronic" for the patient to choose from*/
+			<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> seasonal</a> // changed "#four" to "#five"
+         		<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">chronic</a> // changed "#four" to "#five"
 	</div>
 </div>	
 	
+//copied contents from the last section to create a new page	
 <div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 5</h1>
+		<h1>Question 5</h1> // changed "Question 4" to "Question 5"
 	</div>
 	
 	<div id="content" class="w3-container">
+		 // changed "Are your symptoms seasonal or chronic?" to "Is your mucus thin and watery?"
 		<p>Is your mucus thin and watery?</p>
-			<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         		<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+			/* the two code below will  display two buttons on the survery that will show either a "yes" or "no" for the patient to choose from*/
+			<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> // changed "#five" to "#six"
+         		<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black">No</a> // changed "#five" to "#six"
 	</div>
 </div>	
 	
+//copied contents from the last section to create a new page	
 <div class="page" id="six">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 6</h1>
+		<h1>Question 6</h1> // changed "Question 5" to "Question 6"
 	</div>
 	
 	<div id="content" class="w3-container">
+		 // changed "Is your mucus thin and watery?" to "Is your mucus thick yellow or green?"
 		<p>Is your mucus thick yellow or green?</p>
-			<a href="#seven"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         		<a href="#seven"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+			/* the two code below will  display two buttons on the survery that will show either a "yes" or "no" for the patient to choose from*/
+			<a href="#seven"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>  // changed "#six" to "#seven"
+         		<a href="#seven"  onclick="coldAdd();" class="w3-btn w3-black">No</a> // changed "#six" to "#seven"
 	</div>
 </div>		
 	
+//copied contents from the last section to create a new page
 <div class="page" id="seven">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Results</h1>
+		<h1>Results</h1> // changed "Question 6" to "Results"
 	</div>
 	
 	<div id="content" class="w3-container">
+		/* the two code below should make the results appear on the survery/*
 		<p id="results"></p>
 		<resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent>
 	</div>
